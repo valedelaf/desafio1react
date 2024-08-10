@@ -8,7 +8,7 @@ const NavBar = () => {
     const precioTotal = Intl.NumberFormat("de-DE").format(total);
 
     return (
-    <Navbar collapseOnSelect expand="lg" style={{backgroundColor: 'black'}}>
+    <Navbar collapseOnSelect expand="lg" style={{backgroundColor: 'black', width:'100vw', marginTop: '0px'}}>
       <Container>
         <Navbar.Brand style={{color: 'white'}}href="#home">Pizzería Mamma Mía </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
