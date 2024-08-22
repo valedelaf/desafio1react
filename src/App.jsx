@@ -8,16 +8,18 @@ import Home from './components/Home'
 import Footer from './components/Footer'
 import RegisterPage from './components/RegisterPage'
 import LoginPage from './components/LoginPage'
+import Cart from './components/Cart'
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <Navbar></Navbar>
       {/*<Home></Home>*/}
       {/*<RegisterPage></RegisterPage>*/}
-      <LoginPage></LoginPage>
+      {/*<LoginPage></LoginPage>*/}
+      <Cart></Cart>
       <Footer></Footer>
     </>
   )
