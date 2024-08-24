@@ -1,10 +1,23 @@
 import Header from "./Header"
 import CardPizza from "./CardPizza"
 import pizzeriaImagen from '../assets/img/header-pizzas.jpg'
-import pizzas from './pizzas'
+//import pizzas from './pizzas'
+import { useEffect, useState } from "react"
 
 
 const Home = () => {
+const [pizzas, setPizzas] = useState([])
+
+const getPizzas = async () => {
+    const respuesta = await fetch ('http://localhost:5000/api/pizzas')
+    const pizzas = await respuesta.json()
+
+    setPizzas(pizzas)
+}
+useEffect(() => {
+    getPizzas()
+}, [])
+
     return (
     <>
     <Header 
