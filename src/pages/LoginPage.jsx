@@ -21,7 +21,7 @@ const LoginPage = () => {
     }
 
     return (
-    <div style={{width: '100%', height: '80vw', marginLeft: '100px', marginTop: '30px'}}>
+    <div style={{width: '100%', height: '70vh', marginLeft: '100px', marginTop: '200px'}}>
     <h2> Login </h2>
     <p> Ingresa tu email y contraseña para ingresar a tu cuenta </p>
 

@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-    <div style={{ width: '100%', backgroundColor: "black", color: "white", display: "flex", justifyContent: "center", textAlign: "center", padding: '10px'}}>
+    <div style={{ width: '100vw', backgroundColor: '#a52a2a', color: "white", display: "flex", justifySelf: "center", textAlign: "center", padding: '20px'}}>
        <p> © 2021 - Pizzería Mamma Mia! - Todos los derechos reservados </p>
     </div>
     )};

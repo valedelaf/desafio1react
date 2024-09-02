@@ -2,11 +2,11 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Button } from 'react-bootstrap';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useState } from 'react';
-
+import { Link } from 'react-router-dom';
+import Profile from '../pages/Profile';
 const NavBar = () => {
-    const token = false;
+    const token = true;
     const [carrito, setCarrito] = useState([]);
     
     const getTotal = () => {
@@ -21,22 +21,21 @@ const NavBar = () => {
   };
 
     return (
-    <Navbar fixed='top' collapseOnSelect expand="lg" style={{backgroundColor: '#a52a2a', color: 'white', width:'100vw', marginTop: '0px', height: '5vw', fontSize: '20px'}}>
+    <Navbar fixed='top' collapseOnSelect expand="lg" style={{backgroundColor: '#a52a2a', color: 'white', width:'100vw', marginTop: '0px', height: '10vh', fontSize: '20px'}}>
       <Container>
-        <Navbar.Brand style={{color: 'white'}}href="#home">Pizzería Mamma Mía </Navbar.Brand>
+        <Navbar.Brand style={{color: 'white'}}>Pizzería Mamma Mía </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link style={{color: 'white'}} href="#features">🍕Home</Nav.Link>
-            <Nav.Link style={{color: 'white'}} href="#pricing">{token ? '🔓Profile' : '🔓Register'}</Nav.Link>
-            <Nav.Link style={{color: 'white'}} href="#pricing">{token ? '🔓Logout' : '🔓Login'}</Nav.Link>
-            <NavDropdown style={{color: 'white', fontSize: '35px', marginLeft: '500px'}} title="🛒" id="navbarScrollingDropdown" >
-              <NavDropdown.Item href="#action3">
-                 </NavDropdown.Item>
-            </NavDropdown>
+          <Nav style={{fontSize: '20px'}} className="me-auto">
+            <Link to= "/"style={{color: 'white'}}>🍕Home</Link>
+            <Link to= "/profile" style={{color: 'white'}}>🔓{Profile()}</Link>
+            <Link to= "/login" style={{color: 'white'}}>🔓Login</Link>
+            <Link to= "/register" style={{color: 'white'}}>🔓Regístrate</Link>
+           <Link to= "/cart" style={{color: 'white', marginLeft: '500px', marginBottom: '5px'}} > 🛒Total: ${getTotal()}
+            </Link>
           </Nav>
           <Nav>
-            <Nav.Link style={{color: 'white'}} href="#deets"><Button style={{borderColor: 'white', backgroundColor: '#a52a2a', fontWeight: 'bold', fontSize: '20px'}}> 💲 Pagar</Button> </Nav.Link>
+            <Nav.Link style={{color: 'white'}}><Button style={{borderColor: 'white', backgroundColor: '#a52a2a', fontWeight: 'bold', fontSize: '20px'}}> 💲 Pagar</Button> </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -1,5 +1,5 @@
-import Header from "./Header"
-import CardPizza from "./CardPizza"
+import Header from "../components/Header"
+import CardPizza from "../components/CardPizza"
 import pizzeriaImagen from '../assets/img/header-pizzas.jpg'
 //import pizzas from './pizzas'
 import { useEffect, useState } from "react"

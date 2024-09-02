@@ -1,7 +1,7 @@
-import CartPizzaCard from "./CartPizzaCard"
-import pizzas from './pizzas'
+import CartPizzaCard from "../components/CartPizzaCard"
+import pizzas from '../components/pizzas'
 import { useState } from "react"
-import NavBar from "./Navbar"
+import NavBar from "../components/Navbar"
 import { Button } from "react-bootstrap"
 
 
